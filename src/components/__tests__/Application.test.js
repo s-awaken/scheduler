@@ -5,11 +5,9 @@ import {
   render, cleanup, fireEvent, waitForElement, getByText, prettyDOM, getAllByTestId, getByAltText
   , getByPlaceholderText, queryByText, queryByAltText
 } from "@testing-library/react";
-// import { fireEvent } from "@testing-library/react";
 
 
 import Application from "components/Application";
-// import waitForElement from '@testing-library/react';
 
 afterEach(cleanup);
 describe("Application", () => {
@@ -102,7 +100,6 @@ describe("Application", () => {
     fireEvent.change(getByPlaceholderText(appointment, /enter student name/i), {
       target: { value: "`syrym" }
     });
-    // fireEvent.click(getByAltText(appointment,"Mildred Nazir"));
     fireEvent.click(getByAltText(appointment, "Sylvia Palmer"));
 
     fireEvent.click(getByText(appointment,"Save"));

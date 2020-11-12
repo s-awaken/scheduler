@@ -100,7 +100,7 @@ describe("Application", () => {
     fireEvent.click(queryByAltText(appointment, "Edit"));
 
     fireEvent.change(getByPlaceholderText(appointment, /enter student name/i), {
-      target: { value: "Henry" }
+      target: { value: "`syrym" }
     });
     // fireEvent.click(getByAltText(appointment,"Mildred Nazir"));
     fireEvent.click(getByAltText(appointment, "Sylvia Palmer"));
@@ -109,7 +109,7 @@ describe("Application", () => {
 
     expect(getByText(appointment, "SAVING")).toBeInTheDocument();
 
-    await waitForElement(() => getByText(appointment, "Henry"));
+    await waitForElement(() => getByText(appointment, "`syrym"));
     const day = getAllByTestId(container, "day").find(day =>
       queryByText(day, "Monday")
     );

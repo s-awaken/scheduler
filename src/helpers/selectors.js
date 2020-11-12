@@ -52,7 +52,7 @@ import Appointment from "components/Appointment";
 
 // };
 
-export  function getAppointmentsForDay(state, day) {
+export function getAppointmentsForDay(state, day) {
   //... returns an array of appointments for that day
   let array = [];
   state.days.forEach((everyDay) => {
@@ -67,7 +67,7 @@ export  function getAppointmentsForDay(state, day) {
 }
 
 
-export  function getInterview(state, interview) {
+export function getInterview(state, interview) {
   if (!interview) {
     return null;
   }

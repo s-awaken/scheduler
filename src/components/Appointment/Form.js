@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Button from "components/Button"
-import InterviewerList from "../InterviewerList"
+import Button from "components/Button.js"
+import InterviewerList from "../InterviewerList.js"
 
 
 
